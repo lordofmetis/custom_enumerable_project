@@ -40,7 +40,7 @@ module Enumerable
   def my_inject(initial = nil)
     accumulator = initial || self[0]
     index = initial ? 0 : 1
-    while index < self.size
+    while index < size
       accumulator = yield(accumulator, self[index])
       index += 1
     end
